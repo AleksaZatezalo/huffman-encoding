@@ -19,5 +19,5 @@ Information entropy (also refereed to as Shannon entropy), defines data communic
 ## Compression
 Once the frequency of each occurring symbol is calculated, Huffman's encoding algorithm sorts all symbols into a binary tree. A node can either be an internal node or a leaf node. All nodes initially start as leaf nodes which contain the symbol itself and it's frequency of appearance.  An internal node connects to two leaf nodes (which contain symbols). Internal nodes contains a weight and links to it's two child nodes. Internal nodes are created by linking two leaf notes in order of decreasing probability, and it's weighting is the sum of the child nodes probabilities. Internal nodes are linked together via the same process until one node without a parent exists. This is called the root node. To encode a symbol traverse down the tree starting at the root node. Use '0' to represent the left child and '1' to represent the right child. 
 
-##Decompression
+## Decompression
 Decompression is simply a matter of converting prefix codes to symbols via the same process as above. However the Huffman tree must be constructed beforehand.
