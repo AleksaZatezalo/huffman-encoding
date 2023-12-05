@@ -8,15 +8,26 @@ Description: A script that encodes and decodes files using python.
 #  Helper Functions For Manipulating Bytes
 ##########################################
 
+def get_bit(byte, bit_num):
+    """
+    Return bit number bit_num from right in byte.
+
+    @param int byte: a given byte
+    @param int bit_num: a specific bit number within the byte
+    @rtype: int
+    """
+    
+    return (byte & (1 << bit_num)) >> bit_num
+
 def byte_to_bits(byte):
     """
-    Return the representation of a byte as a string of bits/
+    Return the representation of a byte as a string of bits.
 
     @param int byte: a given byte
     @rtype string
     """
     
-    pass
+    return "".join([str(get_bit(byte, range(7, -1, -1)))])
 
 def bits_to_bytes(bits):
     """
@@ -26,7 +37,7 @@ def bits_to_bytes(bits):
     @rtype: int
     """
 
-    pass
+    return sum([int(bits[pos]) << (7 - pos) for pos in range(len(bits))])
 
 ##########################################
 #  Helper Functions For Compression
