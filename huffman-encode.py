@@ -4,6 +4,7 @@ Date: December 2023
 Description: A script that encodes and decodes files using python.
 """
 
+
 ##########################################
 #  Helper Functions For Manipulating Bytes
 ##########################################
@@ -67,6 +68,13 @@ def huffman_tree(freq_dict):
     @param dict(int,int) freq_dict: a frequency dictionary
     @rtype: HuffmanNode
     """
+    # Make an Array of Tupples
+
+    # Leafs
+
+    # Internals
+
+    # Root Node
 
     pass
 
