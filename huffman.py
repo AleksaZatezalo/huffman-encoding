@@ -51,7 +51,13 @@ def make_freq_dict(text):
     @rtype: dict{int, int}
     """
 
-    pass
+    freq_dic = {}
+    for byte in text:
+        if byte in freq_dic.keys():
+            freq_dic[byte] += 1
+        else:
+            freq_dic[byte] = 1
+    return freq_dic
 
 def huffman_tree(freq_dict):
     """
