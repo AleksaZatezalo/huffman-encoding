@@ -70,11 +70,9 @@ def huffman_tree(freq_dict):
     """
     # Make an Array of Tupples
 
-    # Leafs
+    # Create Leafs
 
-    # Internals
-
-    # Root Node
+    # Create Internal Nodes
 
     pass
 
